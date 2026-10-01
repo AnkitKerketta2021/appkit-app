@@ -1,0 +1,9 @@
+.blog-page {
+  padding-bottom: 130px;
+}
+
+.blog-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}

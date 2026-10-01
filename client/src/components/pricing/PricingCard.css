@@ -1,0 +1,143 @@
+.pricing-card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--border-light);
+  border-radius: 26px;
+  background: white;
+  box-shadow: var(--shadow-small);
+  transition:
+    transform var(--transition-normal),
+    box-shadow var(--transition-normal);
+}
+
+.pricing-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-large);
+}
+
+.pricing-card--popular {
+  border: 2px solid rgba(85, 65, 217, 0.3);
+}
+
+.pricing-card__popular {
+  position: absolute;
+  z-index: 2;
+  top: 20px;
+  left: 20px;
+  padding: 7px 12px;
+  border-radius: var(--radius-pill);
+  color: white;
+  background: var(--brand-primary);
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.pricing-card__image-wrapper {
+  height: 190px;
+  overflow: hidden;
+}
+
+.pricing-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 500ms ease;
+}
+
+.pricing-card:hover .pricing-card__image {
+  transform: scale(1.06);
+}
+
+.pricing-card__content {
+  padding: 30px;
+}
+
+.pricing-card__name {
+  color: var(--brand-primary);
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.pricing-card__price {
+  margin-top: 14px;
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.pricing-card__price strong {
+  color: var(--text-primary);
+  font-size: 48px;
+  letter-spacing: -3px;
+}
+
+.pricing-card__price span {
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+.pricing-card__description {
+  min-height: 55px;
+  margin-top: 12px;
+  color: var(--text-secondary);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.pricing-card__features {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.pricing-card__features li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-secondary);
+  font-size: 13px;
+}
+
+.pricing-card__features li span {
+  color: #49a981;
+  font-weight: 700;
+}
+
+.pricing-card__actions {
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.pricing-card__demo,
+.pricing-card__buy {
+  height: 48px;
+  border-radius: 13px;
+  cursor: pointer;
+  font-weight: 650;
+  transition:
+    transform var(--transition-fast),
+    background var(--transition-fast);
+}
+
+.pricing-card__demo {
+  color: var(--brand-primary);
+  border: 1px solid rgba(85, 65, 217, 0.2);
+  background: rgba(85, 65, 217, 0.05);
+}
+
+.pricing-card__buy {
+  color: white;
+  background: var(--brand-gradient);
+}
+
+.pricing-card__demo:hover,
+.pricing-card__buy:hover {
+  transform: translateY(-2px);
+}

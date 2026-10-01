@@ -1,0 +1,22 @@
+.pricing-page {
+  padding-bottom: 130px;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  align-items: stretch;
+}
+
+@media (max-width: 950px) {
+  .pricing-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+}

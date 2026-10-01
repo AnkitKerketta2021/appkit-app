@@ -1,0 +1,237 @@
+.login-page {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  overflow: hidden;
+}
+
+.login-container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  perspective: 1400px;
+}
+
+.login-card {
+  --rotate-x: 0deg;
+  --rotate-y: 0deg;
+
+  width: min(580px, calc(100vw - 40px));
+  padding: 55px;
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 30px;
+
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.06));
+
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+
+  transform:
+    perspective(1400px)
+    rotateX(var(--rotate-x))
+    rotateY(var(--rotate-y));
+
+  transition: transform 120ms ease-out;
+  will-change: transform;
+}
+
+.login-card--focused {
+  transform: perspective(1400px) rotateX(0deg) rotateY(0deg);
+}
+
+.login-card__content {
+  position: relative;
+  z-index: 2;
+}
+
+.login-header {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.login-header h1 {
+  color: white;
+  font-size: 48px;
+  line-height: 1;
+  letter-spacing: -2px;
+}
+
+.login-header p {
+  margin-top: 8px;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 13px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-field label {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 12px;
+}
+
+.form-label-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form-field input {
+  width: 100%;
+  height: 48px;
+  padding: 0 14px;
+  border: 1px solid rgba(255, 255, 255, 0.17);
+  border-radius: 10px;
+  outline: none;
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+  transition:
+    border-color 180ms ease,
+    background 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.form-field input::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.form-field input:focus {
+  border-color: rgba(255, 255, 255, 0.55);
+  background: rgba(255, 255, 255, 0.14);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.07);
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+.password-wrapper input {
+  padding-right: 65px;
+}
+
+.password-wrapper button {
+  position: absolute;
+  top: 50%;
+  right: 14px;
+  transform: translateY(-50%);
+  padding: 0;
+  color: #ffc400;
+  background: transparent;
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 650;
+}
+
+.forgot-password {
+  padding: 0;
+  color: #ffc400;
+  background: transparent;
+  cursor: pointer;
+  font-size: 11px;
+}
+
+.remember {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.remember input {
+  width: 15px;
+  height: 15px;
+  accent-color: #ffc000;
+}
+
+.login-button {
+  width: 100%;
+  height: 50px;
+  margin-top: 5px;
+  border-radius: 10px;
+  color: white;
+  background: linear-gradient(135deg, #ffc400, #ffad00);
+  box-shadow: 0 12px 25px rgba(255, 180, 0, 0.25);
+  cursor: pointer;
+  font-size: 19px;
+  font-weight: 700;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.login-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 30px rgba(255, 180, 0, 0.35);
+}
+
+.login-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.login-error {
+  margin-bottom: 18px;
+  padding: 11px 14px;
+  border: 1px solid rgba(255, 100, 120, 0.35);
+  border-radius: 10px;
+  color: #ffdce2;
+  background: rgba(255, 70, 100, 0.12);
+  font-size: 12px;
+}
+
+.login-footer {
+  margin-top: 26px;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 12px;
+}
+
+.login-footer a {
+  color: #ffc400;
+  font-weight: 650;
+}
+
+.demo-credentials {
+  margin-top: 18px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 10px;
+}
+
+.demo-credentials strong {
+  color: rgba(255, 210, 70, 0.8);
+}
+
+@media (max-width: 500px) {
+  .login-card {
+    padding: 38px 22px;
+  }
+
+  .login-header h1 {
+    font-size: 40px;
+  }
+}

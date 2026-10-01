@@ -1,0 +1,31 @@
+.features-page {
+  padding-bottom: 130px;
+}
+
+.page-heading {
+  max-width: 760px;
+  margin: 0 auto 75px;
+  text-align: center;
+}
+
+.page-heading h1 {
+  margin-top: 18px;
+  color: var(--text-primary);
+  font-size: clamp(46px, 6vw, 72px);
+  line-height: 1;
+  letter-spacing: -4px;
+}
+
+.page-heading p {
+  max-width: 600px;
+  margin: 25px auto 0;
+  color: var(--text-secondary);
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.features-list {
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+}

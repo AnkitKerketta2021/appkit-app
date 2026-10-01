@@ -1,0 +1,145 @@
+.animated-background {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 10% 20%, rgba(255, 0, 119, 0.85), transparent 35%),
+    radial-gradient(circle at 85% 15%, rgba(0, 80, 255, 0.9), transparent 40%),
+    radial-gradient(circle at 60% 90%, rgba(87, 0, 255, 0.85), transparent 45%),
+    linear-gradient(135deg, #e90072 0%, #5f16db 48%, #1824d9 100%);
+}
+
+.background-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  pointer-events: none;
+}
+
+.background-glow--pink {
+  width: 420px;
+  height: 420px;
+  top: -100px;
+  left: -100px;
+  background: rgba(255, 0, 135, 0.55);
+}
+
+.background-glow--blue {
+  width: 500px;
+  height: 500px;
+  right: -150px;
+  top: 80px;
+  background: rgba(0, 140, 255, 0.45);
+}
+
+.background-glow--purple {
+  width: 600px;
+  height: 400px;
+  bottom: -200px;
+  left: 25%;
+  background: rgba(85, 0, 255, 0.5);
+}
+
+.background-grid {
+  position: absolute;
+  inset: 0;
+  opacity: 0.1;
+  background-image:
+    linear-gradient(45deg, transparent 48%, rgba(255, 255, 255, 0.7) 49%, transparent 50%),
+    linear-gradient(-45deg, transparent 48%, rgba(255, 255, 255, 0.7) 49%, transparent 50%);
+  background-size: 80px 80px;
+  pointer-events: none;
+}
+
+.background-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(1px);
+  opacity: 0.75;
+  pointer-events: none;
+}
+
+.background-orb--left {
+  width: 320px;
+  height: 320px;
+  left: 12%;
+  top: 14%;
+  background:
+    radial-gradient(circle at 35% 30%, #25e8ff, #008eff 45%, #1651d9 70%, transparent 72%);
+  animation: largeOrbFloat 9s ease-in-out infinite;
+}
+
+.background-orb--right {
+  width: 250px;
+  height: 250px;
+  right: 14%;
+  top: 38%;
+  background:
+    radial-gradient(circle at 35% 30%, #21dfff, #2959ff 45%, #7500d9 70%, transparent 72%);
+  animation: largeOrbFloat 11s ease-in-out infinite reverse;
+}
+
+.balls {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.ball {
+  position: absolute;
+  display: block;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 30% 25%, #26f4ff 0%, #0098ff 28%, #3b25e9 62%, #a3007d 100%);
+  box-shadow:
+    inset -15px -20px 35px rgba(0, 0, 0, 0.35),
+    inset 10px 10px 25px rgba(255, 255, 255, 0.15),
+    0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+.ball--1 { width: 70px; height: 70px; top: 3%; left: 38%; animation: ballFloat1 8s ease-in-out infinite; }
+.ball--2 { width: 55px; height: 55px; top: 2%; left: 52%; animation: ballFloat2 7s ease-in-out infinite; }
+.ball--3 { width: 70px; height: 70px; top: 18%; right: 26%; animation: ballFloat3 9s ease-in-out infinite; }
+.ball--4 { width: 100px; height: 100px; top: 40%; right: 13%; animation: ballFloat4 10s ease-in-out infinite; }
+.ball--5 { width: 70px; height: 70px; left: 18%; top: 53%; animation: ballFloat5 8s ease-in-out infinite; }
+.ball--6 { width: 35px; height: 35px; left: 38%; bottom: 7%; animation: ballFloat6 6s ease-in-out infinite; }
+.ball--7 { width: 70px; height: 70px; right: 35%; bottom: -10px; animation: ballFloat7 9s ease-in-out infinite; }
+.ball--8 { width: 42px; height: 42px; right: 50%; top: 12%; animation: ballFloat8 7s ease-in-out infinite; }
+
+@keyframes ballFloat1 {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(30px, 45px, 0); }
+}
+@keyframes ballFloat2 {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(-25px, 30px, 0); }
+}
+@keyframes ballFloat3 {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(40px, -35px, 0); }
+}
+@keyframes ballFloat4 {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  50% { transform: translate3d(-35px, 35px, 0) scale(1.08); }
+}
+@keyframes ballFloat5 {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(35px, -45px, 0); }
+}
+@keyframes ballFloat6 {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(-25px, -30px, 0); }
+}
+@keyframes ballFloat7 {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(40px, -25px, 0); }
+}
+@keyframes ballFloat8 {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(-30px, 40px, 0); }
+}
+@keyframes largeOrbFloat {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(25px, -20px, 0); }
+}

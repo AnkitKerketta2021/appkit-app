@@ -1,0 +1,24 @@
+[
+  {
+    "id": "demo-user-001",
+    "username": "demo",
+    "firstName": "Demo",
+    "lastName": "User",
+    "gender": "male",
+    "email": "demo@gmail.com",
+    "phone": "9999999999",
+    "password": "Demo@123",
+    "createdAt": "2026-08-26T00:00:00.000Z"
+  },
+  {
+    "id": "3f858745-7bdf-45bb-b17d-8c294f05178e",
+    "username": "Ankit",
+    "firstName": "Ankit",
+    "lastName": "Kerketta",
+    "gender": "male",
+    "email": "ankit@gmail.com",
+    "phone": "9988776655",
+    "password": "Ankit@123",
+    "createdAt": "2026-08-26T11:56:59.701Z"
+  }
+]
